@@ -57,13 +57,13 @@ public class Customer {
 	@ApiModelProperty(notes = "Customer Age", example = "29", required = true, position = 4)
 	@Size(max = 3, min = 1)
 	@Column(name = "Age", nullable = false)
-	private Int customerAge;
+	private Integer customerAge;
     
     @Pattern(regexp = "^\\d{10}$", message = "10 digits only allowed")
 	@ApiModelProperty(notes = "Customer Phone Number", example = "9345087978", required = true, position = 5)
 	@Size(max = 10, min = 10)
 	@Column(name = "Phone_Number", nullable = false)
-	private Int customerPhoneNumber;
+	private Integer customerPhoneNumber;
     
 	@Column(nullable = false, updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
@@ -131,19 +131,19 @@ public class Customer {
 		return customerDob;
 	}
     
-    public Int getCustomerPhoneNumber() {
+    public Integer getCustomerPhoneNumber() {
 		return customerPhoneNumber;
 	}
 
-	public void setCustomerPhoneNumber(Int customerPhoneNumber) {
+	public void setCustomerPhoneNumber(Integer customerPhoneNumber) {
 		this.customerPhoneNumber = customerPhoneNumber;
 	}
     
-     public Int getCustomerAge() {
+     public Integer getCustomerAge() {
 		return customerAge;
 	}
 
-	public void setCustomerAge(Int customerAge) {
+	public void setCustomerAge(Integer customerAge) {
 		this.customerAge = customerAge;
 	}
 
